@@ -1,15 +1,13 @@
-
-<div id="userDetails">
+<div>
     <h2>{{user.name}}</h2>
+    {{ error }}
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}"/>
-    Order:
     <select name="sort" id="sort" ng-model="repoSortOrder">
         <option value="+name">Name</option>
         <option value="-stargazers_count">Stars</option>
         <option value="+language">Language</option>
     </select>
 </div>
-
 <table>
     <thead>
     <tr>
@@ -26,3 +24,4 @@
     </tr>
     </tbody>
 </table>
+<a href="#/main">Back to search</a>

@@ -9,7 +9,6 @@
                     return response.data;
                 });
         };
-
         var getRepos = function(user) {
             return $http.get(user.repos_url)
                 .then(function(response) {
@@ -21,7 +20,6 @@
             getRepos: getRepos
         };
     };
-
     var module = angular.module("githubViewer");
     module.factory("github", github);
 }());
